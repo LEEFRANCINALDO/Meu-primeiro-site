@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel ="icon" type="image/x-icon" href ="imagens/Logo.png" alt = "0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="formatos.css"/>
+        <title> Receitas do Brasil!</title>
+    </head>
+        <nav class="menu">
+          <ul class="main-list">
+            <li class="list-item">
+              <a class="list-link" href="home.html">Home</a>
+            </li>
+            <li class="list-item">
+              <a class="list-link" href="receitas.html">Receitas</a>
+            </li>
+            <li class="list-item">
+              <a class="list-link -cadastro" href="cadastro.html">Cadastro</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main id="cadastro" role="main" class="d-flex justify-content-center align-items-center">
+        <form id="formCadastro" method="get" action="mailto:cherestek@gmail.com" target="_blank" class="text-start w-50">
+            <h1 class="text-center">Cadastrar-se para receber um aviso quando postarmos novas receitas</h1>
+            <br>
+            <div>
+                <input type="hidden" name="subject" value="insira seus dados aqui">
+                <input type="hidden" name="body" value="insira seus dados aqui">
+            </div>
+            <div class="d-flex justify-content-center"></div>
+            <div class="row g-0 mb-2">
+                <label class="col-2 col-form-label" for="nome">Nome</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="nome" placeholder="Nome Completo" id="nome" autofocus required>
+                </div>
+            </div>
+            <div class="row g-0 mb-2">
+                <label class="col-2 col-form-label" for="email">Email</label>
+                <div class="col-10">
+                    <input type="email" class="form-control" name="email" placeholder="@ E-mail" id="email" required>
+                </div>
+            </div>
+            <div class="row g-0 mb-2">
+                <label class="col-2 col-form-label" for="cep">CEP</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" placeholder="CEP" id="cep" maxlength="10" required onblur="pesquisacep(this)">
+                </div>
+            </div>
+            <div class="row g-0 mb-2">
+                <label for="rua" class="col-2 col-form-label">Rua</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" placeholder="Rua" id="rua" required>
+                </div>
+            </div>
+            <div class="row g-0 mb-2">
+                <label class="col-sm-2 col-form-label" for="numero">Nº</label>
+                <div class="col-sm-2">
+                    <input class="form-control" type="number" placeholder="Nº" id="numero" required>
+                </div>
+                <label class="col-sm-3 col-form-label" for="complemento">Complemento</label>
+                <div class="col-sm-5">
+                    <input class="form-control" type="text" placeholder="Complemento" id="complemento">
+                </div>
+            </div>
+            <div class="row g-0 mb-2">
+                <label class="col-sm-2 col-form-label" for="cidade">Cidade</label>
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" placeholder="Cidade" id="cidade" required>
+                </div>
+                <label class="col-sm-3 col-form-label" for="uf">UF</label>
+                <div class="col-sm-5">
+                    <select class="form-select" name="uf" id="uf" required>
+                        <option value="">Selecione</option>
+  <option value="ac">Acre</option>
+  <option value="al">Alagoas</option>
+  <option value="am">Amazonas</option>
+  <option value="ap">Amapá</option>
+  <option value="ba">Bahia</option>
+  <option value="ce">Ceará</option>
+  <option value="df">Distrito Federal</option>
+  <option value="es">Espírito Santo</option>
+  <option value="go">Goiás</option>
+  <option value="ma">Maranhão</option>
+  <option value="mg">Minas Gerais</option>
+  <option value="ms">Mato Grosso do Sul</option>
+  <option value="mt">Mato Grosso</option>
+  <option value="pa">Pará</option>
+  <option value="pb">Paraíba</option>
+  <option value="pe">Pernambuco</option>
+  <option value="pi">Piauí</option>
+  <option value="pr">Paraná</option>
+  <option value="rj">Rio de Janeiro</option>
+  <option value="rn">Rio Grande do Norte</option>
+  <option value="ro">Rondônia</option>
+  <option value="rr">Roraima</option>
+  <option value="rs">Rio Grande do Sul</option>
+  <option value="sc">Santa Catarina</option>
+  <option value="se">Sergipe</option>
+  <option value="sp">São Paulo</option>
+  <option value="to">Tocantins</option>
+</select>
+                </div>
+            </div>
+            <br>
+            <div class="botão">
+                
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <h2 class="main-text -footer">© FSB Storm of Flavors 2024 Receitas do Brasil!</h2>
+          </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script>
+            function pesquisacep(cep) {
+                var cepLimpo = cep.value.replace(-/\D/g, '');
+              
+              if (cepLimpo.length !== 8) {
+                console.log("CEP inválido");
+                return;
+              }
+             
+              console.log("CEP pesquisado: " + cepLimpo);
+              
+              fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                  console.log(data);
+                  
+                  document.getElementById('Rua').value = data.logradouro;
+                  document.getElementById('cidade').value = data.localidade;
+                  document.getElementById('UF').value = data.uf;
+                })
+                .catch(error => console.error(error));
+            }
+          </script>
+   
+    </body>
+</html>
